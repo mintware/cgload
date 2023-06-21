@@ -94,18 +94,9 @@ int_handler:
 		mov	byte [192h], 0FFh	; 7FFFh => FFFFh
 		mov	byte [1A3h], 73h	; jge => jae
 
-		; Disable copy protection.
-		mov	word [42ECh], 9090h
-		mov	word [42FDh], 9090h
-		mov	word [4319h], 9090h
-		mov	word [432Ah], 9090h
-		mov	word [433Eh], 9090h
-		mov	word [4340h], 9090h
-		mov	word [4343h], 9090h
-		mov	word [4345h], 9090h
-		mov	word [459Ch], 9090h
-		mov	word [459Eh], 9090h
-		mov	word [45A3h], 9090h
+		; Bypass copy protection.
+		mov	byte [42C2h], 90h
+		mov	word [42C8h], 7DEBh
 
 		; Modified patch from NewRisingSun that fixes AT keyboard.
 		mov	word [9932h], 0CEBh
