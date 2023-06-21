@@ -91,7 +91,7 @@ int_handler:
 		; returned maximum available block size value is treated as
 		; a signed value which it's not, so we need to fix this as
 		; well.
-		mov	word [191h], 0FFFFh	; 7FFFh => FFFFh
+		mov	byte [192h], 0FFh	; 7FFFh => FFFFh
 		mov	byte [1A3h], 73h	; jge => jae
 
 		; Disable copy protection.
