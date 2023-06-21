@@ -95,8 +95,7 @@ int_handler:
 		mov	byte [1A3h], 73h	; jge => jae
 
 		; Bypass copy protection.
-		mov	byte [42C2h], 90h
-		mov	word [42C8h], 7DEBh
+		mov	byte [4260h], 0C3h
 
 		; Modified patch from NewRisingSun that fixes AT keyboard.
 		mov	word [9932h], 0CEBh
